@@ -1,0 +1,142 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 24px 0;
+  width: 632px;
+  height: 100%;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .Searcher {
+    display: flex;
+    height: 48px;
+    // width: 220px;
+    border-radius: 8px;
+    padding: 14px;
+
+    background: #2D303E;
+    border: 1px solid #393C49;
+    border-radius: 8px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      cursor: pointer;
+      * {
+        fill: #FFFFFF;
+      }
+    }
+
+    input {
+      height: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color:#FFFFFF;
+      cursor: pointer;
+
+      &::placeholder {
+        color: #ABBBC2;
+      }
+    }
+    
+  }
+
+  &_title {
+    text-transform: capitalize;
+
+    h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #E0E6E9;
+    }
+  }
+}
+
+.Menu {
+  display: flex;
+  gap: 0 44px;
+  height: 33px;
+  border-bottom: 1px solid #393C49;
+  list-style-type: none;
+
+
+  li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    height: 100%;
+    cursor: pointer;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+
+    &:hover, &.active {
+      color: #EA7C69;
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1.5px;
+      display: block;
+      width: 37px;
+      height: 3px;
+      opacity: 0;
+      background-color: #EA7C69;
+      border-radius: 10px;
+      transition: 0.2s ease;
+    }
+  }
+}
+
+.Dishes {
+  &_topBar  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      color: #FFFFFF;
+      text-transform: capitalize;
+    }
+  }
+
+  & > .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 28px;
+    overflow: scroll;
+    height: 595px;
+    padding-top: 24px;
+    
+  }
+}

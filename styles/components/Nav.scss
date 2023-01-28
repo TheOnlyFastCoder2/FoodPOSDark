@@ -1,0 +1,57 @@
+.Nav {
+
+
+  width: 104px;
+  height: 834px;
+  padding-left: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 16px;
+  background-color:#1F1D2B ;
+
+  &_logo {
+    width: 56px;
+    margin-left: 12px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0; 
+    list-style-type: none;
+  }
+
+  &_route {
+    display: flex;
+    align-items: center;
+    width: 92px;
+    height: 80px;
+    padding-left: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    cursor: pointer;
+
+    &_button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+
+    &:hover {
+      background-color: #252836;
+
+      .Nav_route_button {
+        background-color: #EA7C69;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+
+        svg * {
+          fill: #FFFFFF;
+        }
+      }
+    }
+  }
+}

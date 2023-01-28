@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  text-align: start; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #252836; }
+
+#root {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 24px;
+  width: 1194px;
+  height: 834px;
+  max-width: 1418px;
+  max-height: 834px;
+  margin: auto; }
+
+.Nav {
+  width: 104px;
+  height: 834px;
+  padding-left: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 16px;
+  background-color: #1F1D2B; }
+  .Nav_logo {
+    width: 56px;
+    margin-left: 12px; }
+  .Nav .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    list-style-type: none; }
+  .Nav_route {
+    display: flex;
+    align-items: center;
+    width: 92px;
+    height: 80px;
+    padding-left: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    cursor: pointer; }
+    .Nav_route_button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      transition: background-color 0.2s; }
+    .Nav_route:hover {
+      background-color: #252836; }
+      .Nav_route:hover .Nav_route_button {
+        background-color: #EA7C69;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32); }
+        .Nav_route:hover .Nav_route_button svg * {
+          fill: #FFFFFF; }
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 24px 0;
+  width: 632px;
+  height: 100%; }
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .Header .Searcher {
+    display: flex;
+    height: 48px;
+    border-radius: 8px;
+    padding: 14px;
+    background: #2D303E;
+    border: 1px solid #393C49;
+    border-radius: 8px; }
+    .Header .Searcher svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      cursor: pointer; }
+      .Header .Searcher svg * {
+        fill: #FFFFFF; }
+    .Header .Searcher input {
+      height: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #FFFFFF;
+      cursor: pointer; }
+      .Header .Searcher input::placeholder {
+        color: #ABBBC2; }
+  .Header_title {
+    text-transform: capitalize; }
+    .Header_title h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin-bottom: 4px; }
+    .Header_title p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #E0E6E9; }
+
+.Menu {
+  display: flex;
+  gap: 0 44px;
+  height: 33px;
+  border-bottom: 1px solid #393C49;
+  list-style-type: none; }
+  .Menu li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    height: 100%;
+    cursor: pointer;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-transform: capitalize; }
+    .Menu li:hover, .Menu li.active {
+      color: #EA7C69; }
+      .Menu li:hover:before, .Menu li.active:before {
+        opacity: 1; }
+    .Menu li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1.5px;
+      display: block;
+      width: 37px;
+      height: 3px;
+      opacity: 0;
+      background-color: #EA7C69;
+      border-radius: 10px;
+      transition: 0.2s ease; }
+
+.Dishes_topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px; }
+  .Dishes_topBar h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-transform: capitalize; }
+.Dishes > .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 28px;
+  overflow: scroll;
+  height: 595px;
+  padding-top: 24px; }
+
+.Orders {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+  width: 409px;
+  height: 100%;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #1F1D2B; }
+  .Orders h1 {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px; }
+  .Orders_nav {
+    display: flex;
+    gap: 0 8px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px; }
+    .Orders_nav li {
+      padding: 7px 12px;
+      text-transform: capitalize;
+      color: #EA7C69;
+      cursor: pointer;
+      background: #1F1D2B;
+      border: 1px solid #393C49;
+      border-radius: 8px; }
+      .Orders_nav li:hover, .Orders_nav li.active {
+        color: #FFFFFF;
+        background-color: #EA7C69;
+        border-color: none; }
+  .Orders .Table .Table_body .Order_qty input, .Orders .Table_body .Order_qty .Table input, .Orders .Table .Table_body .Order_note input, .Orders .Table_body .Order_note .Table input, .Orders .Table .Table_body .Order_price, .Orders .Table_body .Table .Order_price {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #E0E6E9;
+    text-transform: capitalize; }
+  .Orders .Table .Table_body .Order_qty input, .Orders .Table_body .Order_qty .Table input, .Orders .Table .Table_body .Order_note input, .Orders .Table_body .Order_note .Table input {
+    background: #2D303E;
+    border: 2px solid #393C49;
+    border-radius: 8px;
+    outline: none; }
+  .Orders .Table_heads {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-transform: capitalize; }
+    .Orders .Table_heads .qty, .Orders .Table_heads .price {
+      width: 48px; }
+    .Orders .Table_heads .item {
+      width: calc(297px - 48px); }
+  .Orders .Table_body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+    max-height: 454px;
+    overflow: scroll;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #393C49; }
+    .Orders .Table_body .Order {
+      display: flex;
+      justify-content: space-between; }
+      .Orders .Table_body .Order > .container.grid {
+        display: grid;
+        width: 297px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 0;
+        grid-template-areas: "info info qty" "note note note"; }
+      .Orders .Table_body .Order > .container.flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 13px;
+        justify-content: space-between; }
+      .Orders .Table_body .Order_info {
+        display: flex;
+        align-items: center;
+        grid-area: info; }
+        .Orders .Table_body .Order_info_picture {
+          height: 40px;
+          width: 40px;
+          margin-right: 8px;
+          border-radius: 50%;
+          overflow: hidden; }
+          .Orders .Table_body .Order_info_picture img {
+            width: 100%;
+            height: 100%; }
+        .Orders .Table_body .Order_info_text h3 {
+          color: #FFFFFF;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          overflow: hidden;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .Orders .Table_body .Order_info_text p {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 17px;
+          color: #ABBBC2; }
+      .Orders .Table_body .Order_qty {
+        margin-left: 68px;
+        grid-area: qty; }
+        .Orders .Table_body .Order_qty input {
+          width: 48px;
+          height: 48px;
+          text-align: center;
+          -moz-appearance: textfield; }
+          .Orders .Table_body .Order_qty input::-webkit-outer-spin-button, .Orders .Table_body .Order_qty input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */ }
+      .Orders .Table_body .Order_note {
+        height: 48px;
+        grid-area: note; }
+        .Orders .Table_body .Order_note input {
+          width: 100%;
+          height: 100%;
+          padding: 14px 96px 14px 14px; }
+      .Orders .Table_body .Order_price {
+        color: #FFFFFF;
+        white-space: nowrap; }
+      .Orders .Table_body .Order_remove {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border: 1px solid #FF7CA3;
+        border-radius: 8px;
+        background-color: #1F1D2B;
+        cursor: pointer; }
+        .Orders .Table_body .Order_remove svg * {
+          fill: #FF7CA3; }
+        .Orders .Table_body .Order_remove:hover {
+          background-color: rgba(255, 124, 163, 0.1); }
+  .Orders_bill > div {
+    display: flex;
+    justify-content: space-between; }
+    .Orders_bill > div:first-child {
+      margin-bottom: 16px; }
+    .Orders_bill > div span:first-child {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #ABBBC2;
+      text-transform: capitalize; }
+    .Orders_bill > div span:last-child {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: #FFFFFF; }
+  .Orders_confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 361px;
+    height: 48px;
+    color: #FAFAFA;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    /* Primary Color */
+    border: none;
+    background: #EA7C69;
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
+    border-radius: 8px;
+    cursor: pointer; }
+
+.CardFood {
+  position: relative;
+  height: 260px;
+  width: 192px; }
+  .CardFood .container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 226px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: #1F1D2B; }
+  .CardFood_picture {
+    position: relative;
+    height: 132px;
+    width: 132px;
+    top: -34px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #1F1D2B;
+    cursor: pointer; }
+    .CardFood_picture:hover {
+      transform: scale(1.2); }
+      .CardFood_picture:hover img {
+        opacity: 0.5; }
+  .CardFood_info {
+    width: 144px;
+    margin: 0 auto;
+    position: relative;
+    top: calc(-34px + 14px);
+    text-align: center; }
+    .CardFood_info h3 {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      color: #FFFFFF; }
+    .CardFood_info h4 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #FFFFFF;
+      margin-top: 8px;
+      margin-bottom: 4px; }
+    .CardFood_info p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #ABBBC2; }
+
+.DropDown {
+  position: relative;
+  height: 48px;
+  padding: 14px;
+  color: #fff;
+  background: #1F1D2B;
+  border: 1px solid #393C49;
+  border-radius: 8px;
+  z-index: 10;
+  cursor: pointer; }
+  .DropDown summary {
+    display: flex;
+    gap: 0 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px; }
+    .DropDown summary svg {
+      transform: rotate(180deg); }
+  .DropDown[open] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+    .DropDown[open] summary svg {
+      transform: rotate(0); }
+  .DropDown ul {
+    position: absolute;
+    top: 100%;
+    left: -100px;
+    width: 200px;
+    background: #1F1D2B;
+    border: 1px solid #393C49;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    list-style-type: none; }
+    .DropDown ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 0;
+      height: 50px; }
+      .DropDown ul li:hover {
+        background-color: #EA7C69;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32); }
+
+/*# sourceMappingURL=index.css.map */
