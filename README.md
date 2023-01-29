@@ -1,2 +1,2 @@
 # FoodMarket
-![изображение](https://user-images.githubusercontent.com/60759188/215344723-8a9e48a7-f8b6-4549-bea5-e24b991d88cf.png)
+![изображение](https://user-images.githubusercontent.com/60759188/215345316-3960f82a-091f-403a-a185-75f4804b2d4c.png)
