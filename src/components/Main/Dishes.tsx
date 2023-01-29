@@ -8,7 +8,7 @@ export default function () {
       <div className="Dishes_topBar">
         <h1>Choose Dishes</h1>
         <DropDown name="Dine In">
-          <li>sdfsdfsdf</li>
+          <li>cafe</li>
         </DropDown>
       </div>
       <div className="container">
